@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
@@ -116,12 +116,24 @@ function Navbar() {
 // ---------------------------------------------------------------------------
 
 function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+    video.setAttribute('webkit-playsinline', '')
+    video.muted = true
+    video.load()
+    video.play().catch(() => {})
+  }, [])
+
   return (
     <section
       className="relative overflow-hidden bg-[#f0f0ee]"
       style={{ minHeight: 'calc(100vh - 72px)' }}
     >
       <video
+        ref={videoRef}
         className="absolute inset-3 sm:inset-5 md:inset-8 w-[calc(100%-1.5rem)] sm:w-[calc(100%-2.5rem)] md:w-[calc(100%-4rem)] h-[calc(100%-1.5rem)] sm:h-[calc(100%-2.5rem)] md:h-[calc(100%-4rem)] object-cover rounded-2xl"
         src="/videos/hero.mp4"
         autoPlay
