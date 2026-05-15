@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #f0f0ee;
+    color: #0A0A0A;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: #0A0A0A;
+    color: #FFFFFF;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+/* Animated border — conic-gradient que recorre el exterior de la card */
+@property --border-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-spin {
+  to { --border-angle: 360deg; }
+}
+
+.project-card-border {
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--border-angle),
+    transparent 0%,
+    transparent 62%,
+    color-mix(in srgb, var(--card-accent, #3b82f6) 50%, transparent) 70%,
+    var(--card-accent, #3b82f6) 75%,
+    color-mix(in srgb, var(--card-accent, #3b82f6) 50%, transparent) 80%,
+    transparent 88%
+  );
+  animation: border-spin 5s linear infinite;
+}
