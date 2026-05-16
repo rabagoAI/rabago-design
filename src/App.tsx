@@ -100,7 +100,7 @@ function Navbar() {
             <a
               key={link}
               href={`#${id}`}
-              className="text-[12px] sm:text-[14px] font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              className="text-[14px] sm:text-[16px] font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200"
             >
               {link}
             </a>
@@ -149,7 +149,7 @@ function Hero() {
         <div className="flex-1 flex items-end pb-10 sm:pb-16 lg:pb-20 px-6 sm:px-12 md:px-20 lg:px-28">
           <div className="max-w-sm">
             <motion.span
-              className="inline-flex items-center gap-1.5 text-[11.5px] font-medium text-gray-500 mb-3"
+              className="inline-flex items-center gap-1.5 text-[15px] font-medium text-gray-700 mb-3"
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -169,7 +169,7 @@ function Hero() {
             </motion.h1>
 
             <motion.p
-              className="text-[13px] text-gray-500 font-normal mb-5 leading-relaxed"
+              className="text-[15px] text-gray-700 font-normal mb-5 leading-relaxed"
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.35 }}
@@ -186,14 +186,14 @@ function Hero() {
             >
               <a
                 href="#proyectos"
-                className="inline-flex items-center gap-2 text-[13px] font-medium text-blue-500 border border-blue-400 rounded-full px-5 py-2.5 hover:bg-blue-500 hover:text-white hover:border-blue-500 transition-all duration-200 group"
+                className="inline-flex items-center gap-2 text-[15px] font-medium text-blue-500 border border-blue-400 rounded-full px-5 py-2.5 hover:bg-blue-500 hover:text-white hover:border-blue-500 transition-all duration-200 group"
               >
                 Ver proyectos
                 <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
               </a>
               <a
                 href="#contacto"
-                className="text-[13px] font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200 group inline-flex items-center gap-1"
+                className="text-[15px] font-medium text-gray-800 hover:text-gray-900 transition-colors duration-200 group inline-flex items-center gap-1"
               >
                 Contactar
                 <span className="transition-transform duration-200 group-hover:translate-x-0.5">↓</span>
@@ -240,21 +240,21 @@ function AnimatedCard({ project, index }: { project: Project; index: number }) {
       >
         <div className="flex items-start justify-between mb-6">
           <span
-            className="text-[11px] font-medium uppercase tracking-widest"
+            className="text-[15px] font-medium uppercase tracking-widest"
             style={{ color: project.accent }}
           >
             {project.sector}
           </span>
-          <span className="text-[11px] text-gray-300 font-normal tabular-nums">
+          <span className="text-[15px] text-gray-300 font-normal tabular-nums">
             {project.id}
           </span>
         </div>
 
-        <h3 className="text-[1.4rem] sm:text-[1.65rem] font-medium text-gray-900 tracking-tight mb-3 leading-snug">
+        <h3 className="text-[1.6rem] sm:text-[1.85rem] font-medium text-gray-900 tracking-tight mb-3 leading-snug">
           {project.name}
         </h3>
 
-        <p className="text-[13px] text-gray-500 leading-relaxed mb-6 flex-1">
+        <p className="text-[15px] text-gray-500 leading-relaxed mb-6 flex-1">
           {project.description}
         </p>
 
@@ -263,7 +263,7 @@ function AnimatedCard({ project, index }: { project: Project; index: number }) {
           {project.stack.map((tech) => (
             <span
               key={tech}
-              className="text-[11px] font-medium rounded-full px-2.5 py-1"
+              className="text-[15px] font-medium rounded-full px-2.5 py-1"
               style={{
                 color: project.accent,
                 backgroundColor: `${project.accent}1A`,
@@ -278,7 +278,7 @@ function AnimatedCard({ project, index }: { project: Project; index: number }) {
           href={project.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-[12px] font-medium transition-colors duration-200 group/link self-start"
+          className="inline-flex items-center gap-1.5 text-[14px] font-medium transition-colors duration-200 group/link self-start"
           style={{ color: project.accent }}
         >
           Ver proyecto
@@ -323,10 +323,10 @@ function Proyectos() {
         transition={{ duration: 0.6 }}
         className="flex items-baseline justify-between mb-14 border-b border-gray-300 pb-5 px-6 sm:px-12 md:px-20 lg:px-28"
       >
-        <h2 className="text-[1.5rem] sm:text-[1.75rem] font-medium text-gray-900 tracking-tight">
+        <h2 className="text-[1.7rem] sm:text-[2rem] font-medium text-gray-900 tracking-tight">
           Proyectos
         </h2>
-        <span className="text-[12px] text-gray-400 font-normal hidden sm:block">
+        <span className="text-[14px] text-gray-400 font-normal hidden sm:block">
           Trabajo seleccionado
         </span>
       </motion.div>
@@ -391,7 +391,7 @@ function SobreMi() {
         transition={{ duration: 0.6 }}
         className="flex items-baseline justify-between mb-14 border-b border-gray-300 pb-5"
       >
-        <h2 className="text-[1.5rem] sm:text-[1.75rem] font-medium text-gray-900 tracking-tight">
+        <h2 className="text-[1.7rem] sm:text-[2rem] font-medium text-gray-900 tracking-tight">
           Sobre mí
         </h2>
       </motion.div>
@@ -403,17 +403,17 @@ function SobreMi() {
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-[1.1rem] sm:text-[1.2rem] font-medium text-gray-900 leading-relaxed mb-6 tracking-tight">
+          <p className="text-[1.25rem] sm:text-[1.6rem] font-medium text-gray-900 leading-relaxed mb-6 tracking-tight">
             Manufacturing Manager con más de 20 años de experiencia industrial,
             en transición hacia el desarrollo web y la integración de inteligencia artificial.
           </p>
-          <p className="text-[13px] text-gray-500 leading-relaxed mb-6">
+          <p className="text-[15px] text-gray-500 leading-relaxed mb-6">
             Combino una visión de negocio sólida con stack técnico moderno para
             construir productos digitales que funcionan de verdad. Actualmente
             cursando DAM (Desarrollo de Aplicaciones Multiplataforma) y
             especializándome en aplicaciones con IA.
           </p>
-          <p className="text-[13px] text-gray-500 leading-relaxed">
+          <p className="text-[15px] text-gray-500 leading-relaxed">
             Me interesa el espacio donde la tecnología resuelve problemas reales:
             automatización de procesos, herramientas internas y productos con IA
             para sectores tradicionales.
@@ -426,14 +426,14 @@ function SobreMi() {
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <p className="text-[11px] font-medium text-gray-400 uppercase tracking-widest mb-5">
+          <p className="text-[15px] font-medium text-gray-400 uppercase tracking-widest mb-5">
             Stack técnico
           </p>
           <div className="flex flex-wrap gap-2">
             {SKILLS.map((skill) => (
               <span
                 key={skill}
-                className="text-[12px] font-medium text-gray-600 border border-gray-200 rounded-full px-3 py-1.5 hover:border-gray-400 hover:text-gray-900 transition-colors duration-200"
+                className="text-[14px] font-medium text-gray-600 border border-gray-200 rounded-full px-3 py-1.5 hover:border-gray-400 hover:text-gray-900 transition-colors duration-200"
               >
                 {skill}
               </span>
@@ -441,10 +441,10 @@ function SobreMi() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-gray-200">
-            <p className="text-[11px] font-medium text-gray-400 uppercase tracking-widest mb-3">
+            <p className="text-[15px] font-medium text-gray-400 uppercase tracking-widest mb-3">
               Actualmente
             </p>
-            <p className="text-[13px] text-gray-600">
+            <p className="text-[15px] text-gray-600">
               Proyectos freelance de diseño y desarrollo web · IA aplicada a negocio
             </p>
           </div>
@@ -475,7 +475,7 @@ function Contacto() {
   }
 
   const inputClass =
-    'w-full bg-transparent border-b border-white/15 focus:border-white/50 outline-none text-[13px] text-white placeholder-white/25 py-3 transition-colors duration-300 resize-none'
+    'w-full bg-transparent border-b border-white/15 focus:border-white/50 outline-none text-[15px] text-white placeholder-white/25 py-3 transition-colors duration-300 resize-none'
 
   return (
     <section id="contacto" className="bg-[#0A0A0A] py-24 px-6 sm:px-12 md:px-20 lg:px-28">
@@ -486,10 +486,10 @@ function Contacto() {
         transition={{ duration: 0.6 }}
         className="flex items-baseline justify-between mb-14 border-b border-white/10 pb-5"
       >
-        <h2 className="text-[1.5rem] sm:text-[1.75rem] font-medium text-white tracking-tight">
+        <h2 className="text-[1.7rem] sm:text-[2rem] font-medium text-white tracking-tight">
           Contacto
         </h2>
-        <span className="text-[12px] text-white/30 font-normal hidden sm:block">
+        <span className="text-[14px] text-white/30 font-normal hidden sm:block">
           Hablemos
         </span>
       </motion.div>
@@ -501,13 +501,13 @@ function Contacto() {
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-[1.4rem] sm:text-[1.75rem] font-medium text-white leading-tight tracking-tight mb-8 italic">
+          <p className="text-[1.6rem] sm:text-[2rem] font-medium text-white leading-tight tracking-tight mb-8 italic">
             Tienes un proyecto.<br />
             Yo tengo la solución.
           </p>
           <a
             href="mailto:rabagoai01@gmail.com"
-            className="text-[13px] text-white/50 hover:text-white transition-colors duration-200 block mb-6"
+            className="text-[15px] text-white/50 hover:text-white transition-colors duration-200 block mb-6"
           >
             rabagoai01@gmail.com
           </a>
@@ -516,7 +516,7 @@ function Contacto() {
               href="https://www.linkedin.com/in/francisco-garcia-rabago-445b20aa"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[12px] font-medium text-white/40 hover:text-white transition-colors duration-200 group inline-flex items-center gap-1"
+              className="text-[14px] font-medium text-white/40 hover:text-white transition-colors duration-200 group inline-flex items-center gap-1"
             >
               LinkedIn
               <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
@@ -525,7 +525,7 @@ function Contacto() {
               href="https://github.com/rabagoAI"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[12px] font-medium text-white/40 hover:text-white transition-colors duration-200 group inline-flex items-center gap-1"
+              className="text-[14px] font-medium text-white/40 hover:text-white transition-colors duration-200 group inline-flex items-center gap-1"
             >
               GitHub
               <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
@@ -545,13 +545,13 @@ function Contacto() {
               animate={{ opacity: 1, y: 0 }}
               className="py-8"
             >
-              <p className="text-[1.2rem] font-medium text-white italic mb-2">Recibido.</p>
-              <p className="text-[13px] text-white/40">Te respondo en menos de 24h.</p>
+              <p className="text-[1.6rem] font-medium text-white italic mb-2">Recibido.</p>
+              <p className="text-[15px] text-white/40">Te respondo en menos de 24h.</p>
             </motion.div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-8">
               <div>
-                <label className="text-[11px] font-medium text-white/35 uppercase tracking-widest block mb-1">
+                <label className="text-[15px] font-medium text-white/35 uppercase tracking-widest block mb-1">
                   Nombre
                 </label>
                 <input
@@ -565,7 +565,7 @@ function Contacto() {
                 />
               </div>
               <div>
-                <label className="text-[11px] font-medium text-white/35 uppercase tracking-widest block mb-1">
+                <label className="text-[15px] font-medium text-white/35 uppercase tracking-widest block mb-1">
                   Email
                 </label>
                 <input
@@ -579,7 +579,7 @@ function Contacto() {
                 />
               </div>
               <div>
-                <label className="text-[11px] font-medium text-white/35 uppercase tracking-widest block mb-1">
+                <label className="text-[15px] font-medium text-white/35 uppercase tracking-widest block mb-1">
                   Mensaje
                 </label>
                 <textarea
@@ -594,7 +594,7 @@ function Contacto() {
               </div>
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 text-[13px] font-medium text-white border border-white/25 rounded-full px-5 py-2.5 hover:bg-white hover:text-gray-900 transition-all duration-200 group"
+                className="inline-flex items-center gap-2 text-[15px] font-medium text-white border border-white/25 rounded-full px-5 py-2.5 hover:bg-white hover:text-gray-900 transition-all duration-200 group"
               >
                 Enviar mensaje
                 <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
@@ -615,8 +615,8 @@ function Footer() {
   return (
     <footer className="bg-[#0A0A0A] border-t border-white/10 px-6 sm:px-12 md:px-20 lg:px-28 py-7">
       <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-        <span className="text-[13px] font-medium text-white/60">RabagoDesign</span>
-        <span className="text-[12px] text-white/25">
+        <span className="text-[15px] font-medium text-white/60">RabagoDesign</span>
+        <span className="text-[14px] text-white/25">
           © {new Date().getFullYear()} — rabagoai01@gmail.com
         </span>
         <div className="flex gap-6">
@@ -624,7 +624,7 @@ function Footer() {
             href="https://www.linkedin.com/in/francisco-garcia-rabago-445b20aa"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[12px] text-white/30 hover:text-white/70 transition-colors duration-200"
+            className="text-[14px] text-white/30 hover:text-white/70 transition-colors duration-200"
           >
             LinkedIn
           </a>
@@ -632,7 +632,7 @@ function Footer() {
             href="https://github.com/rabagoAI"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[12px] text-white/30 hover:text-white/70 transition-colors duration-200"
+            className="text-[14px] text-white/30 hover:text-white/70 transition-colors duration-200"
           >
             GitHub
           </a>
